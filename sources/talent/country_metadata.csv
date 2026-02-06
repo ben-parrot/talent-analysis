@@ -1,0 +1,243 @@
+id,iso,name,display_name,iso3,num_code,phone_code,region,sub_region,population,internet_users,internet_penetration,piracy_rate,active,accessibleTier,Parrot Piracy Markets
+1,AF,AFGHANISTAN,Afghanistan,AFG,4,93,Asia,Central Asia,35530081,6003183,16.9,0,1,Enterprise,
+2,AL,ALBANIA,Albania,ALB,8,355,Europe,Southeast Europe,2930187,1932024,65.94,0,1,Enterprise,
+3,DZ,ALGERIA,Algeria,DZA,12,213,Africa,Northern Africa,41318142,18580000,44.97,0,1,Enterprise,
+11,AM,ARMENIA,Armenia,ARM,51,374,Asia,Western Asia,2930450,2126716,72.57,0,,Enterprise,
+5,AD,ANDORRA,Andorra,AND,20,376,Europe,Southern Europe,76965,67305,87.45,0,,Enterprise,
+6,AO,ANGOLA,Angola,AGO,24,244,Africa,Central Africa,29784193,5951453,19.98,0,,Enterprise,
+7,AI,ANGUILLA,Anguilla,AIA,660,1264,Caribbean,Leeward Islands,14909,11557,77.52,0,,Enterprise,
+8,AQ,ANTARCTICA,Antarctica,HLD,0,0,Oceania,Oceania,2700,2700,100,0,,Enterprise,
+9,AG,ANTIGUA AND BARBUDA,Antigua and Barbuda,ATG,28,1268,Caribbean,Leeward Islands,102012,81545,79.94,0,,Enterprise,
+10,AR,ARGENTINA,Argentina,ARG,32,54,Latin America,South America,44271041,41586960,93.94,0,1,Enterprise,AR
+4,AS,AMERICAN SAMOA,American Samoa,ASM,16,1684,Oceania,Oceania,55641,22000,39.54,0,,Enterprise,
+12,AW,ARUBA,Aruba,ABW,533,297,Caribbean,Leeward Antilles,105264,91532,86.95,0,,Enterprise,
+13,AU,AUSTRALIA,Australia,AUS,36,61,Oceania,Oceania,24450561,21743803,88.93,0,1,Enterprise,AU
+14,AT,AUSTRIA,Austria,AUT,40,43,Europe,Central Europe,8735453,7695168,88.09,0,1,Enterprise,AT
+15,AZ,AZERBAIJAN,Azerbaijan,AZE,31,994,Europe,Eastern Europe,9827589,7999431,81.4,0,1,Enterprise,
+16,BS,BAHAMAS,Bahamas,BHS,44,1242,Caribbean,Lucayan Archipelago,395361,333143,84.26,0,,Enterprise,
+17,BH,BAHRAIN,Bahrain,BHR,48,973,Middle East,Arabian Peninsula,1566993,1535653,98,0,1,Enterprise,BH
+18,BD,BANGLADESH,Bangladesh,BGD,50,880,Asia,South Asia,164669751,88687000,53.86,0,1,Enterprise,BD
+19,BB,BARBADOS,Barbados,BRB,52,1246,Caribbean,Windward Islands,285719,228717,80.05,0,,Enterprise,
+20,BY,BELARUS,Belarus,BLR,112,375,Europe,Eastern Europe,9468338,6725018,71.03,0,1,Enterprise,
+21,BE,BELGIUM,Belgium,BEL,56,32,Europe,Western Europe,11429336,10857126,94.99,0,1,Enterprise,BE
+22,BZ,BELIZE,Belize,BLZ,84,501,Latin America,Central America,374681,167020,44.58,0,,Enterprise,
+23,BJ,BENIN,Benin,BEN,204,229,Africa,Western Africa,11175692,3801758,34.02,0,,Enterprise,
+24,BM,BERMUDA,Bermuda,BMU,60,1441,North America,North America,61349,60125,98,0,,Enterprise,
+32,BN,BRUNEI,Brunei,BRN,96,673,Asia,Southeast Asia,428697,410836,95.83,0,1,Enterprise,
+26,BO,BOLIVIA,Bolivia,BOL,68,591,Latin America,Central South America,11051600,7570580,68.5,0,,Enterprise,
+27,BA,BOSNIA AND HERZEGOVINA,Bosnia and Herzegovina,BIH,70,387,Europe,Southeast Europe,3507017,2828846,80.66,0,1,Enterprise,
+28,BW,BOTSWANA,Botswana,BWA,72,267,Africa,Southern Africa,2291661,923528,40.3,0,1,Enterprise,
+29,BV,BOUVET ISLAND,Bouvet Island,HLD,74,0,,,,,,0,,Enterprise,
+30,BR,BRAZIL,Brazil,BRA,76,55,Latin America,South America,209288278,149057635,71.22,0,1,Enterprise,BR
+31,IO,BRITISH INDIAN OCEAN TERRITORY,British Indian Ocean Territory,HLD,0,246,,,,,,0,,Enterprise,
+25,BT,BHUTAN,Bhutan,BTN,64,975,Asia,South Asia,807610,370423,45.87,0,,Enterprise,
+33,BG,BULGARIA,Bulgaria,BGR,100,359,Europe,Southeast Europe,7084571,4663065,65.82,0,1,Enterprise,
+34,BF,BURKINA FASO,Burkina Faso,BFA,854,226,Africa,Western Africa,19193382,3704265,19.3,0,,Enterprise,
+35,BI,BURUNDI,Burundi,BDI,108,257,Africa,Eastern Africa,10864245,617116,5.68,0,,Enterprise,
+38,CA,CANADA,Canada,CAN,124,1,North America,North America,36624199,33000381,90.11,0,1,Enterprise,CA
+37,CM,CAMEROON,Cameroon,CMR,120,237,Africa,Central Africa,24053727,6128422,25.48,0,,Enterprise,
+51,CK,COOK ISLANDS,Cook Islands,COK,184,682,Oceania,Oceania,17380,11377,65.46,0,,Enterprise,
+39,CV,CAPE VERDE,Cape Verde,CPV,132,238,,,,,,0,,Enterprise,
+40,KY,CAYMAN ISLANDS,Cayman Islands,CYM,136,1345,Caribbean,Greater Antilles,61559,47003,76.35,0,,Enterprise,
+41,CF,CENTRAL AFRICAN REPUBLIC,Central African Republic,CAF,140,236,Africa,Central Africa,4659080,256432,5.5,0,,Enterprise,
+42,TD,CHAD,Chad,TCD,148,235,Africa,Central Africa,14899994,768274,5.16,0,,Enterprise,
+43,CL,CHILE,Chile,CHL,152,56,Latin America,South America,18054726,14108392,78.14,0,1,Enterprise,CL
+44,CN,CHINA,China,CHN,156,86,Asia,East Asia,1409517397,802000000,56.9,0,1,Enterprise,CN
+45,CX,CHRISTMAS ISLAND,Christmas Island,HLD,0,61,Oceania,Oceania,2072,1000,48.26,0,,Enterprise,
+46,CC,COCOS (KEELING) ISLANDS,Cocos (Keeling) Islands,HLD,0,672,,,,,,0,,Enterprise,
+47,CO,COLOMBIA,Colombia,COL,170,57,Latin America,South America,49065615,31275567,63.74,0,1,Enterprise,CO
+48,KM,COMOROS,Comoros,COM,174,269,Africa,Eastern Africa,813912,130578,16.04,0,,Enterprise,
+49,CG,CONGO,Congo,COG,178,242,Africa,Central Africa,5260750,650000,12.36,0,,Enterprise,
+50,CD,THE DEMOCRATIC REPUBLIC OF THE CONGO,Democratic Republic of the Congo,COD,180,242,Africa,Central Africa,81339988,5137271,6.32,0,,Enterprise,
+71,FJ,FIJI,Fiji,FJI,242,679,Oceania,Oceania,905502,500958,55.32,0,,Enterprise,
+52,CR,COSTA RICA,Costa Rica,CRI,188,506,Latin America,Central America,4905769,4236443,86.36,0,,Enterprise,
+53,CI,COTE D'IVOIRE,Cote D'Ivoire,CIV,384,225,Africa,Western Africa,24294750,6318355,26.01,0,,Enterprise,
+54,HR,CROATIA,Croatia,HRV,191,385,Europe,Central Europe,4189353,3787838,90.42,0,1,Enterprise,
+55,CU,CUBA,Cuba,CUB,192,53,Caribbean,Greater Antilles,11484636,3696765,32.19,0,1,Enterprise,
+56,CY,CYPRUS,Cyprus,CYP,196,357,Middle East,Near East,1179551,971369,82.35,0,1,Enterprise,
+57,CZ,CZECH REPUBLIC,Czech Republic,CZE,203,420,Europe,Central Europe,10618303,9323428,87.81,0,1,Enterprise,
+58,DK,DENMARK,Denmark,DNK,208,45,Europe,Scandinavia,5733551,5574770,97.23,0,1,Enterprise,DK
+59,DJ,DJIBOUTI,Djibouti,DJI,262,253,Africa,Eastern Africa,956985,180000,18.81,0,,Enterprise,
+60,DM,DOMINICA,Dominica,DMA,212,1767,Caribbean,Windward Islands,73925,48249,65.27,0,,Enterprise,
+61,DO,DOMINICAN REPUBLIC,Dominican Republic,DOM,214,1809,Caribbean,Greater Antilles,10766998,6054013,56.23,0,,Enterprise,
+62,EC,ECUADOR,Ecuador,ECU,218,593,Latin America,South America,16624858,13476687,81.06,0,1,Enterprise,
+63,EG,EGYPT,Egypt,EGY,818,20,Africa,Northern Africa,97553151,49231493,50.47,0,1,Enterprise,EG
+64,SV,EL SALVADOR,El Salvador,SLV,222,503,Latin America,Central America,6377853,3100000,48.61,0,,Enterprise,
+65,GQ,EQUATORIAL GUINEA,Equatorial Guinea,GNQ,226,240,Africa,Central Africa,1267689,312704,24.67,0,,Enterprise,
+66,ER,ERITREA,Eritrea,ERI,232,291,Africa,Eastern Africa,5068831,71000,1.4,0,,Enterprise,
+67,EE,ESTONIA,Estonia,EST,233,372,Europe,Eastern Europe,1309632,1276521,97.47,0,1,Enterprise,
+68,ET,ETHIOPIA,Ethiopia,ETH,231,251,Africa,Eastern Africa,104957438,16437811,15.66,0,1,Enterprise,
+69,FK,FALKLAND ISLANDS (MALVINAS),Falkland Islands (Malvinas),FLK,238,500,Latin America,South America,2910,2900,99.66,0,,Enterprise,
+70,FO,FAROE ISLANDS,Faroe Islands,FRO,234,298,Europe,Northern Europe,49290,47515,96.4,0,,Enterprise,
+139,FM,"MICRONESIA, FEDERATED STATES OF","Micronesia, Federated States of",FSM,583,691,Oceania,Oceania,527530,56193,10.65,0,,Enterprise,
+72,FI,FINLAND,Finland,FIN,246,358,Europe,Scandinavia,5523231,5225678,94.61,0,1,Enterprise,FI
+73,FR,FRANCE,France,FRA,250,33,Europe,Western Europe,64979548,60421689,92.99,0,1,Enterprise,FR
+74,GF,FRENCH GUIANA,French Guiana,GUF,254,594,Latin America,South America,282731,120000,42.44,0,,Enterprise,
+84,GL,GREENLAND,Greenland,GRL,304,299,North America,North America,56480,52000,92.07,0,,Enterprise,
+76,TF,FRENCH SOUTHERN TERRITORIES,French Southern Territories,HLD,0,0,,,,,,0,,Enterprise,
+77,GA,GABON,Gabon,GAB,266,241,Africa,Central Africa,2025137,985492,48.66,0,,Enterprise,
+78,GM,GAMBIA,Gambia,GMB,270,220,Africa,Western Africa,2100568,392277,18.67,0,,Enterprise,
+79,GE,GEORGIA,Georgia,GEO,268,995,Europe,Eastern Europe,3912061,2658311,67.95,0,1,Enterprise,
+80,DE,GERMANY,Germany,DEU,276,49,Europe,Western Europe,82114224,79127551,96.36,0,1,Enterprise,DE
+81,GH,GHANA,Ghana,GHA,288,233,Africa,Western Africa,28833629,10110000,35.06,0,1,Enterprise,
+82,GI,GIBRALTAR,Gibraltar,GIB,292,350,Europe,Southern Europe,34571,32654,94.45,0,,Enterprise,
+83,GR,GREECE,Greece,GRC,300,30,Europe,Southeast Europe,11159773,7815926,70.04,0,1,Enterprise,GR
+87,GU,GUAM,Guam,GUM,316,1671,Oceania,Oceania,164229,134145,81.68,0,,Enterprise,
+85,GD,GRENADA,Grenada,GRD,308,1473,Caribbean,Windward Islands,107825,56000,51.94,0,,Enterprise,
+86,GP,GUADELOUPE,Guadeloupe,GLP,312,590,Caribbean,Leeward Islands,449568,220000,48.94,0,,Enterprise,
+96,HK,HONG KONG,Hong Kong,HKG,344,852,Asia,East Asia,7364883,6461894,87.74,0,1,Enterprise,HK
+88,GT,GUATEMALA,Guatemala,GTM,320,502,Latin America,Central America,16913503,5868597,34.7,0,,Enterprise,
+89,GN,GUINEA,Guinea,GIN,324,224,Africa,Western Africa,12717176,1602485,12.6,0,,Enterprise,
+90,GW,GUINEA-BISSAU,Guinea-Bissau,GNB,624,245,Africa,Western Africa,1861283,120000,6.45,0,,Enterprise,
+91,GY,GUYANA,Guyana,GUY,328,592,Latin America,South America,777859,395007,50.78,0,,Enterprise,
+92,HT,HAITI,Haiti,HTI,332,509,Caribbean,Greater Antilles,10981229,1308290,11.91,0,,Enterprise,
+93,HM,HEARD ISLAND AND MCDONALD ISLANDS,Heard Island and Mcdonald Islands,HLD,0,0,,,,,,0,,Enterprise,
+94,VA,HOLY SEE (VATICAN CITY STATE),Vatican City,VAT,336,39,Europe,Southern Europe,792,480,60.61,0,,Enterprise,
+95,HN,HONDURAS,Honduras,HND,340,504,Latin America,Central America,9265067,2700000,29.14,0,,Enterprise,
+100,ID,INDONESIA,Indonesia,IDN,360,62,Asia,Southeast Asia,263991379,143260000,54.27,0,1,Enterprise,ID
+97,HU,HUNGARY,Hungary,HUN,348,36,Europe,Central Europe,9721559,8588776,88.35,0,1,Enterprise,HU
+98,IS,ICELAND,Iceland,ISL,352,354,Europe,Scandinavia,335025,334303,99.78,0,1,Enterprise,
+99,IN,INDIA,India,IND,356,91,Asia,South Asia,1339180127,462124989,34.51,0,1,Enterprise,IN
+107,JP,JAPAN,Japan,JPN,392,81,Asia,East Asia,127484450,118626672,93.05,0,1,Enterprise,JP
+101,IR,IRAN,Iran,IRN,364,98,Middle East,Near East,81162788,56700000,69.86,0,1,Enterprise,IR
+102,IQ,IRAQ,Iraq,IRQ,368,964,Middle East,Near East,38274618,19000000,49.64,0,1,Enterprise,IQ
+103,IE,IRELAND,Ireland,IRL,372,353,Europe,Western Europe,4761657,4453436,93.53,0,1,Enterprise,
+104,IL,ISRAEL,Israel,ISR,376,972,Middle East,Near East,8321570,6740287,81,0,1,Enterprise,IL
+105,IT,ITALY,Italy,ITA,380,39,Europe,Southern Europe,59359900,54798299,92.32,0,1,Enterprise,IT
+106,JM,JAMAICA,Jamaica,JAM,388,1876,Caribbean,Greater Antilles,2890299,1581100,54.7,0,1,Enterprise,
+115,KG,KYRGYZSTAN,Kyrgyzstan,KGZ,417,996,Asia,Central Asia,6045117,2493400,41.25,0,,Enterprise,
+108,JO,JORDAN,Jordan,JOR,400,962,Middle East,Near East,9702353,8700000,89.67,0,1,Enterprise,JO
+36,KH,CAMBODIA,Cambodia,KHM,116,855,Asia,Southeast Asia,16005373,8005551,50.02,0,,Enterprise,
+110,KE,KENYA,Kenya,KEN,404,254,Africa,Eastern Africa,49699862,43329434,87.18,0,1,Enterprise,
+111,KI,KIRIBATI,Kiribati,KIR,296,686,Oceania,Oceania,116398,32947,28.31,0,,Enterprise,
+112,KP,"KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",North Korea,PRK,408,850,Asia,East Asia,25490965,20000,0.08,0,1,Enterprise,
+113,KR,SOUTH KOREA,South Korea,KOR,410,82,Asia,East Asia,50982212,47353649,92.88,0,1,Enterprise,KR
+114,KW,KUWAIT,Kuwait,KWT,414,965,Middle East,Arabian Peninsula,4136528,4104347,99.22,0,1,Enterprise,KW
+109,KZ,KAZAKHSTAN,Kazakhstan,KAZ,398,7,Asia,Central Asia,18204499,5700905,31.32,0,1,Enterprise,
+116,LA,LAO PEOPLE'S DEMOCRATIC REPUBLIC,Laos,LAO,418,856,Asia,Southeast Asia,6858160,2439106,35.57,0,,Enterprise,
+117,LV,LATVIA,Latvia,LVA,428,371,Europe,Eastern Europe,1949670,1663739,85.33,0,1,Enterprise,
+118,LB,LEBANON,Lebanon,LBN,422,961,Middle East,Middle East,6082357,5546494,91.19,0,1,Enterprise,LB
+119,LS,LESOTHO,Lesotho,LSO,426,266,Africa,Southern Africa,2233339,627860,28.11,0,,Enterprise,
+120,LR,LIBERIA,Liberia,LBR,430,231,Africa,Western Africa,4731906,395063,8.35,0,,Enterprise,
+121,LY,LIBYAN ARAB JAMAHIRIYA,Libya,LBY,434,218,Africa,Northern Africa,6470956,3800000,58.72,0,,Enterprise,
+122,LI,LIECHTENSTEIN,Liechtenstein,LIE,438,423,Europe,Western Europe,37922,37322,98.42,0,,Enterprise,
+123,LT,LITHUANIA,Lithuania,LTU,440,370,Europe,Eastern Europe,2890297,2599678,89.95,0,1,Enterprise,
+124,LU,LUXEMBOURG,Luxembourg,LUX,442,352,Europe,Western Europe,583455,572242,98.08,0,1,Enterprise,
+200,LK,SRI LANKA,Sri Lanka,LKA,144,94,Asia,South Asia,20876917,6710160,32.14,0,1,Enterprise,
+126,MK,MACEDONIA,Macedonia,MKD,807,389,Europe,Southeast Europe,2083160,1583315,76.01,0,1,Enterprise,
+127,MG,MADAGASCAR,Madagascar,MDG,450,261,Africa,Eastern Africa,25570895,1900000,7.43,0,,Enterprise,
+128,MW,MALAWI,Malawi,MWI,454,265,Africa,Eastern Africa,18622104,1828503,9.82,0,,Enterprise,
+133,MH,MARSHALL ISLANDS,Marshall Islands,MHL,584,692,Oceania,Oceania,53127,21000,39.53,0,,Enterprise,
+146,MM,MYANMAR,Myanmar,MMR,104,95,Asia,Southeast Asia,53370609,18000000,33.73,0,,Enterprise,
+131,ML,MALI,Mali,MLI,466,223,Africa,Western Africa,18541980,12480176,67.31,0,,Enterprise,
+132,MT,MALTA,Malta,MLT,470,356,Europe,Southern Europe,430835,360056,83.57,0,1,Enterprise,
+142,MN,MONGOLIA,Mongolia,MNG,496,976,Asia,East Asia,3075647,2000000,65.03,0,,Enterprise,
+134,MQ,MARTINIQUE,Martinique,MTQ,474,596,Caribbean,Windward Islands,384896,303302,78.8,0,,Enterprise,
+135,MR,MAURITANIA,Mauritania,MRT,478,222,Africa,Western Africa,4420184,810000,18.33,0,,Enterprise,
+136,MU,MAURITIUS,Mauritius,MUS,480,230,Africa,Eastern Africa,1265138,803896,63.54,0,,Enterprise,
+137,YT,MAYOTTE,Mayotte,HLD,0,269,Africa,Eastern Africa,253045,107940,42.66,0,,Enterprise,
+138,MX,MEXICO,Mexico,MEX,484,52,Latin America,Central America,129163276,85000000,65.81,0,1,Enterprise,MX
+125,MO,MACAO,Macau,MAC,446,853,Asia,East Asia,622567,512352,82.3,0,,Enterprise,
+140,MD,"MOLDOVA, REPUBLIC OF",Moldova,MDA,498,373,Europe,Eastern Europe,4051212,2878794,71.06,0,,Enterprise,
+141,MC,MONACO,Monaco,MCO,492,377,Europe,Western Europe,38695,36949,95.49,0,1,Enterprise,
+159,MP,NORTHERN MARIANA ISLANDS,Northern Mariana Islands,MNP,580,1670,Oceania,Oceania,55144,40000,72.54,0,,Enterprise,
+143,MS,MONTSERRAT,Montserrat,MSR,500,1664,Caribbean,Leeward Islands,5177,2900,56.02,0,,Enterprise,
+144,MA,MOROCCO,Morocco,MAR,504,212,Africa,Northern Africa,35739580,22567154,63.14,0,1,Enterprise,MA
+145,MZ,MOZAMBIQUE,Mozambique,MOZ,508,258,Africa,Eastern Africa,29668834,5279135,17.79,0,,Enterprise,
+130,MV,MALDIVES,Maldives,MDV,462,960,Asia,South Asia,436330,340000,77.92,0,,Enterprise,
+147,NA,NAMIBIA,Namibia,NAM,516,264,Africa,Southern Africa,2533794,797027,31.46,0,1,Enterprise,
+129,MY,MALAYSIA,Malaysia,MYS,458,60,Asia,Southeast Asia,31624264,25084255,79.32,0,1,Enterprise,MY
+152,NC,NEW CALEDONIA,New Caledonia,NCL,540,687,Oceania,Oceania,276255,240000,86.88,0,,Enterprise,
+150,NL,NETHERLANDS,Netherlands,NLD,528,31,Europe,Western Europe,17035938,16383879,96.17,0,1,Enterprise,NL
+151,AN,NETHERLANDS ANTILLES,Netherlands Antilles,ANT,530,599,,,,,,0,,Enterprise,
+158,NF,NORFOLK ISLAND,Norfolk Island,NFK,574,672,Oceania,Oceania,2210,796,36.02,0,,Enterprise,
+149,NP,NEPAL,Nepal,NPL,524,977,Asia,South Asia,29304998,16190000,55.25,0,1,Enterprise,
+154,NI,NICARAGUA,Nicaragua,NIC,558,505,Latin America,Central America,6217581,1900000,30.56,0,,Enterprise,
+155,NE,NIGER,Niger,NER,562,227,Africa,Western Africa,21477348,951548,4.43,0,1,Enterprise,
+156,NG,NIGERIA,Nigeria,NGA,566,234,Africa,Western Africa,190886311,98391456,51.54,0,1,Enterprise,NG
+148,NR,NAURU,Nauru,NRU,520,674,Oceania,Oceania,11359,6062,53.37,0,,Enterprise,
+157,NU,NIUE,Niue,NIU,570,683,Oceania,Oceania,1618,1485,91.78,0,,Enterprise,
+153,NZ,NEW ZEALAND,New Zealand,NZL,554,64,Oceania,Oceania,4705818,4184520,88.92,0,1,Enterprise,NZ
+160,NO,NORWAY,Norway,NOR,578,47,Europe,Scandinavia,5353363,5311892,99.23,0,1,Enterprise,NO
+161,OM,OMAN,Oman,OMN,512,968,Middle East,Arabian Peninsula,4636262,3310260,71.4,0,1,Enterprise,OM
+75,PF,FRENCH POLYNESIA,French Polynesia,PYF,258,689,Oceania,Oceania,283007,197576,69.81,0,,Enterprise,
+166,PG,PAPUA NEW GUINEA,Papua New Guinea,PNG,598,675,Oceania,Oceania,8251162,906695,10.99,0,,Enterprise,
+164,PS,"PALESTINIAN TERRITORY, OCCUPIED","Palestinian Territory, Occupied",HLD,0,970,,,,,,0,,Enterprise,
+165,PA,PANAMA,Panama,PAN,591,507,Latin America,Central America,4098587,2799892,68.31,0,1,Enterprise,
+169,PH,PHILIPPINES,Philippines,PHL,608,63,Asia,Southeast Asia,104918090,67000000,63.86,0,1,Enterprise,PH
+167,PY,PARAGUAY,Paraguay,PRY,600,595,Latin America,South America,6811297,6177748,90.7,0,1,Enterprise,
+168,PE,PERU,Peru,PER,604,51,Latin America,South America,32165485,22000000,68.4,0,1,Enterprise,PE
+162,PK,PAKISTAN,Pakistan,PAK,586,92,Asia,South Asia,197015955,44608065,22.64,0,1,Enterprise,PK
+170,PN,PITCAIRN,Pitcairn,PCN,612,0,,,,,,0,,Enterprise,
+171,PL,POLAND,Poland,POL,616,48,Europe,Central Europe,38170712,29757099,77.96,0,1,Enterprise,PL
+172,PT,PORTUGAL,Portugal,PRT,620,351,Europe,Southern Europe,10329506,8015519,77.6,0,1,Enterprise,PT
+173,PR,PUERTO RICO,Puerto Rico,PRI,630,1787,Caribbean,Greater Antilles,3663131,3047311,83.19,0,1,Enterprise,
+174,QA,QATAR,Qatar,QAT,634,974,Middle East,Arabian Peninsula,2694849,2644580,98.13,0,1,Enterprise,QA
+175,RE,REUNION,RÅ½union,REU,638,262,Africa,Eastern Africa,876562,480000,54.76,0,,Enterprise,
+176,RO,ROMANIA,Romania,ROM,642,40,Europe,Southeast Europe,19679306,14387477,73.11,0,1,Enterprise,RO
+177,RU,RUSSIA,Russia,RUS,643,70,Europe,Eastern Europe,143989754,109552842,76.08,0,1,Enterprise,RU
+178,RW,RWANDA,Rwanda,RWA,646,250,Africa,Eastern Africa,12208407,3724678,30.51,0,,Enterprise,
+179,SH,SAINT HELENA,Saint Helena,SHN,654,290,Africa,Western Africa,4049,2200,54.33,0,,Enterprise,
+180,KN,SAINT KITTS AND NEVIS,Saint Kitts and Nevis,KNA,659,1869,Caribbean,Leeward Islands,55345,37210,67.23,0,,Enterprise,
+181,LC,SAINT LUCIA,Saint Lucia,LCA,662,1758,Caribbean,Windward Islands,178844,109370,61.15,0,,Enterprise,
+182,PM,SAINT PIERRE AND MIQUELON,Saint Pierre and Miquelon,SPM,666,508,North America,North America,6320,4500,71.2,0,,Enterprise,
+183,VC,SAINT VINCENT AND THE GRENADINES,Saint Vincent and the Grenadines,VCT,670,1784,Caribbean,Windward Islands,109897,65984,60.04,0,,Enterprise,
+163,PW,PALAU,Palau,PLW,585,680,Oceania,Oceania,21729,7860,36.17,0,,Enterprise,
+185,SM,SAN MARINO,San Marino,SMR,674,378,Europe,Southern Europe,33400,17610,52.72,0,,Enterprise,
+186,ST,SAO TOME AND PRINCIPE,Sâ€¹o TomÅ½ and Prâ€™ncipe,STP,678,239,Africa,Central Africa,204327,57875,28.32,0,,Enterprise,
+187,SA,SAUDI ARABIA,Saudi Arabia,SAU,682,966,Middle East,Arabian Peninsula,32938213,30257715,91.86,0,1,Enterprise,SA
+188,SN,SENEGAL,Senegal,SEN,686,221,Africa,Western Africa,15850567,9749527,61.51,0,1,Enterprise,
+189,CS,SERBIA AND MONTENEGRO,Serbia and Montenegro,HLD,0,381,,,,,,0,,Enterprise,
+190,SC,SEYCHELLES,Seychelles,SYC,690,248,Africa,Eastern Africa,94737,67119,70.85,0,1,Enterprise,
+191,SL,SIERRA LEONE,Sierra Leone,SLE,694,232,Africa,Western Africa,7557212,902462,11.94,0,,Enterprise,
+195,SB,SOLOMON ISLANDS,Solomon Islands,SLB,90,677,Oceania,Oceania,611343,75684,12.38,0,,Enterprise,
+193,SK,SLOVAKIA,Slovakia,SVK,703,421,Europe,Central Europe,5447662,4629641,84.98,0,1,Enterprise,
+194,SI,SLOVENIA,Slovenia,SVN,705,386,Europe,Central Europe,2079976,1663795,79.99,0,1,Enterprise,
+192,SG,SINGAPORE,Singapore,SGP,702,65,Asia,Southeast Asia,5708844,4839204,84.77,0,1,Enterprise,SG
+196,SO,SOMALIA,Somalia,SOM,706,252,Africa,Eastern Africa,14742523,1200000,8.14,0,,Enterprise,
+197,ZA,SOUTH AFRICA,South Africa,ZAF,710,27,Africa,Southern Africa,56717156,30815634,54.33,0,1,Enterprise,ZA
+198,GS,SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS,South Georgia and the South Sandwich Islands,HLD,0,0,,,,,,0,,Enterprise,
+199,ES,SPAIN,Spain,ESP,724,34,Europe,Southern Europe,46354321,42961230,92.68,0,1,Enterprise,ES
+211,TH,THAILAND,Thailand,THA,764,66,Asia,Southeast Asia,69037513,57000000,82.56,0,1,Enterprise,TH
+201,SD,SUDAN,Sudan,SDN,736,249,Africa,Northern Africa,40533330,11816570,29.15,0,,Enterprise,
+202,SR,SURINAME,Suriname,SUR,740,597,Latin America,South America,563402,340000,60.35,0,,Enterprise,
+203,SJ,SVALBARD AND JAN MAYEN,Svalbard and Jan Mayen,SJM,744,47,,,,,,0,,Enterprise,
+204,SZ,SWAZILAND,Swaziland,SWZ,748,268,Africa,Southern Africa,1367254,446051,32.62,0,,Enterprise,
+205,SE,SWEDEN,Sweden,SWE,752,46,Europe,Scandinavia,9910701,9653776,97.41,0,1,Enterprise,SE
+206,CH,SWITZERLAND,Switzerland,CHE,756,41,Europe,Western Europe,8476005,7776749,91.75,0,1,Enterprise,CH
+207,SY,SYRIAN ARAB REPUBLIC,Syrian Arab Republic,SYR,760,963,Middle East,Arabian Peninsula,18269868,6025631,32.98,0,,Enterprise,
+209,TJ,TAJIKISTAN,Tajikistan,TJK,762,992,Asia,Central Asia,8921343,3013256,33.78,0,,Enterprise,
+214,TK,TOKELAU,Tokelau,TKL,772,690,Oceania,Oceania,1300,800,61.54,0,,Enterprise,
+210,TZ,"TANZANIA, UNITED REPUBLIC OF",Tanzania,TZA,834,255,Africa,Eastern Africa,57310019,23000000,40.13,0,1,Enterprise,
+212,TL,TIMOR-LESTE,Timor-Leste,HLD,0,670,Asia,Southeast Asia,1296311,410000,31.63,0,,Enterprise,
+219,TM,TURKMENISTAN,Turkmenistan,TKM,795,7370,Asia,Central Asia,5758075,1049915,18.23,0,1,Enterprise,
+213,TG,TOGO,Togo,TGO,768,228,Africa,Western Africa,7797694,899956,11.54,0,,Enterprise,
+215,TO,TONGA,Tonga,TON,776,676,Oceania,Oceania,108020,57822,53.53,0,,Enterprise,
+221,TV,TUVALU,Tuvalu,TUV,798,688,Oceania,Oceania,11192,5170,46.19,0,,Enterprise,
+216,TT,TRINIDAD AND TOBAGO,Trinidad and Tobago,TTO,780,1868,Caribbean,Windward Islands,1369125,942713,68.86,0,1,Enterprise,
+217,TN,TUNISIA,Tunisia,TUN,788,216,Africa,Northern Africa,11532127,7898534,68.49,0,1,Enterprise,TN
+218,TR,TURKEY,Turkey,TUR,792,90,Middle East,Near East,80745020,56000000,69.35,0,1,Enterprise,TR
+208,TW,"TAIWAN, PROVINCE OF CHINA",Taiwan,TWN,158,886,Asia,East Asia,23626456,20821364,88.13,0,1,Enterprise,TW
+220,TC,TURKS AND CAICOS ISLANDS,Turks and Caicos Islands,TCA,796,1649,Caribbean,Lucayan Archipelago,35446,25000,70.53,0,,Enterprise,
+226,US,UNITED STATES,United States,USA,840,1,North America,North America,324459463,286942362,88.44,0,1,Enterprise,US
+222,UG,UGANDA,Uganda,UGA,800,256,Africa,Eastern Africa,42862958,19000000,44.33,0,,Enterprise,
+223,UA,UKRAINE,Ukraine,UKR,804,380,Europe,Eastern Europe,44222947,40912381,92.51,0,1,Enterprise,
+224,AE,UNITED ARAB EMIRATES,United Arab Emirates,ARE,784,971,Middle East,Arabian Peninsula,9400145,9385420,99.84,0,1,Enterprise,AE
+225,GB,UNITED KINGDOM,United Kingdom,GBR,826,44,Europe,Western Europe,66181585,63061419,95.29,0,1,Enterprise,GB
+229,UZ,UZBEKISTAN,Uzbekistan,UZB,860,998,Asia,Central Asia,31910641,15453227,48.43,0,1,Enterprise,
+227,UM,UNITED STATES MINOR OUTLYING ISLANDS,United States Minor Outlying Islands,HLD,0,1,,,,,,0,,Enterprise,
+228,UY,URUGUAY,Uruguay,URY,858,598,Latin America,South America,3456750,3059727,88.51,0,1,Enterprise,
+232,VN,VIETNAM,Vietnam,VNM,704,84,Asia,Southeast Asia,95540800,64000000,66.99,0,1,Enterprise,VN
+230,VU,VANUATU,Vanuatu,VUT,548,678,Oceania,Oceania,276244,82764,29.96,0,,Enterprise,
+231,VE,VENEZUELA,Venezuela,VEN,862,58,Latin America,South America,31977065,17178743,53.72,0,1,Enterprise,
+235,WF,WALLIS AND FUTUNA,Wallis and Futuna,WLF,876,681,Oceania,Oceania,11773,3900,33.13,0,,Enterprise,
+233,VG,"VIRGIN ISLANDS, BRITISH","Virgin Islands, British",VGB,92,1284,Caribbean,Leeward Islands,31196,14620,46.86,0,,Enterprise,
+234,VI,"VIRGIN ISLANDS, U.S.","Virgin Islands, U.S.",VIR,850,1340,Caribbean,Leeward Islands,104901,57485,54.8,0,,Enterprise,
+184,WS,SAMOA,Samoa,WSM,882,684,Oceania,Oceania,196440,100000,50.91,0,,Enterprise,
+236,EH,WESTERN SAHARA,Western Sahara,ESH,732,212,Africa,Northern Africa,552628,28000,5.07,0,,Enterprise,
+237,YE,YEMEN,Yemen,YEM,887,967,Middle East,Arabian Peninsula,28250420,7031784,24.89,0,,Enterprise,
+238,ZM,ZAMBIA,Zambia,ZMB,894,260,Africa,Eastern Africa,17094130,7248773,42.41,0,,Enterprise,
+239,ZW,ZIMBABWE,Zimbabwe,ZWE,716,263,Africa,Eastern Africa,16529904,6796314,41.12,0,1,Enterprise,
+240,RS,SERBIA,Serbia,SRB,688,381,Europe,Southeast Europe,8790574,6325816,71.96,0,1,Enterprise,
+241,ME,MONTENEGRO,Montenegro,ME,499,,Europe,Southeast Europe,628960,439624,69.9,0,1,Enterprise,
+242,SS,SOUTH SUDAN,South Sudan,SSD,728,211,Africa,Eastern Africa,12919053,2229963,17.26,0,,Enterprise,
