@@ -12,11 +12,9 @@ talent_home as (
   select
     t.name,
     t.home_country,
-    cm_home.display_name as home_country_display,
     home_demand.average_demand as home_country_demand_multiplier,
     ww.average_demand as worldwide_demand
   from (select distinct name, home_country from talent_demand) t
-  left join talent.country_metadata cm_home on t.home_country = cm_home.iso
   left join talent_demand home_demand
     on home_demand.name = t.name and home_demand.country = t.home_country
   left join talent_demand ww on ww.name = t.name and ww.country = 'WW'
@@ -33,28 +31,27 @@ top5 as (
   select
     r.name,
     r.rn,
-    cm.display_name as country_display_name
+    r.country
   from ranked r
-  left join talent.country_metadata cm on r.country = cm.iso
   where r.rn <= 3
 )
 select
   th.name,
-  th.home_country_display as home_country,
+  th.home_country as home_country,
   th.home_country_demand_multiplier,
   th.worldwide_demand,
-  string_agg(t.country_display_name, ', ' order by t.rn) as top_countries
+  string_agg(t.country, ', ' order by t.rn) as top_countries
 from talent_home th
 left join top5 t on th.name = t.name
-group by th.name, th.home_country_display, th.home_country_demand_multiplier, th.worldwide_demand
+group by th.name, th.home_country, th.home_country_demand_multiplier, th.worldwide_demand
 order by th.worldwide_demand desc
 ```
 
 <DataTable data={talent_board} title="Talent Analysis Cohort" rows=all sort="worldwide_demand desc">
   <Column id=name title="Talent"/>
-  <Column id=worldwide_demand contentType=bar title="Worldwide Demand" fmt='#,##0.0'/>
   <Column id=home_country title="Home Country"/>
   <Column id=home_country_demand_multiplier contentType=bar title="Home Country Demand" fmt='#,##0.0'/>
+  <Column id=worldwide_demand contentType=bar title="Worldwide Demand" fmt='#,##0.0'/>
   <Column id=top_countries title="Top 3 Markets"/>
 </DataTable>
 
@@ -80,7 +77,7 @@ select
   d.name, 
   d.home_country,
   cm.display_name as home_country_name,
-  d.name || ' (Origin: ' || coalesce(cm.display_name, d.home_country) || ')' as label,
+  d.name || ' (' || coalesce(cm.display_name, d.home_country) || ')' as label,
   (d.average_home_demand / mv.max_home_demand) as home_demand_index, 
   (d.average_travelability / mv.max_travelability) as travelability_index
 from demand_vs_travelability d
