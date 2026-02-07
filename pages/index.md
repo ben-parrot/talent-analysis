@@ -200,7 +200,7 @@ order by t.name, t.country
 <Heatmap 
   data={heatmap_data}
   title="Top 20 Markets: Talent Demand Share"
-  subtitle="Each cell show's a talent's share of total demand within that market (left is greatest demand)."
+  subtitle="Each cell shows a talent's share of total demand within that market (left is greatest demand)."
   x=country
   y=name
   value=demand_share
@@ -212,7 +212,7 @@ order by t.name, t.country
 />
 <Note>Note: Click and drag the slider's edges to filter</Note>
 <Details title="Interpreting this chart">
-This heatmap shows the demand share of the each talent in the cohort for each country. For example, Ayo Edebiri's share of demand in the US is 18%, while Damson Idris's demand share is 9% in the US.
+This heatmap shows each talent's share of total demand within that country. For example, in the US, Ayo Edebiri's share of demand is 18%, while Damson Idris's demand share is 9%.
 
 The chart corresponds to the 20 markets with the most demand for this cohort, in descending order from left to right (see the bar chart above).
 
@@ -483,6 +483,9 @@ group by all
   <Column id=market_standing_colored title="Market Standing" contentType=html/>
   <Column id=average_demand contentType=bar title="Demand Multiplier" fmt='#,##0.00'/>
 </DataTable>
+<Details title="Interpreting this table">
+**Market standing** is a Parrot classification of how a talent performs in that market relative to other talent there: Exceptional, Outstanding, Good, Average, Below Average.
+</Details>
 
 ### Talent Showcase: {inputs.selected_person.label}
 
@@ -657,3 +660,6 @@ order by regional_demand_multiplier desc
     labels=true labelPosition=outside
     fillColor=#9844FC
 />
+<Details title="Interpreting this chart">
+Average demand multiplier for {inputs.selected_person.label} across all countries in each region. Use this to see which regions drive the most demand for this talent.
+</Details>
