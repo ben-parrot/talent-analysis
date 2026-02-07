@@ -6,14 +6,68 @@ Title: NNAF Talent Analysis
 
 ## Executive Summary
 
-This dashboard analyzes **demand** and **travelability** for the NNAF talent set across global markets. Use it to see where demand is concentrated, how talent performs by region and country, and how individual profiles play in different markets.
+```sql talent_board
+with
+talent_home as (
+  select
+    t.name,
+    t.home_country,
+    cm_home.display_name as home_country_display,
+    home_demand.average_demand as home_country_demand_multiplier,
+    ww.average_demand as worldwide_demand
+  from (select distinct name, home_country from talent_demand) t
+  left join talent.country_metadata cm_home on t.home_country = cm_home.iso
+  left join talent_demand home_demand
+    on home_demand.name = t.name and home_demand.country = t.home_country
+  left join talent_demand ww on ww.name = t.name and ww.country = 'WW'
+),
+ranked as (
+  select
+    t.name,
+    t.country,
+    row_number() over (partition by t.name order by t.average_demand desc) as rn
+  from talent_demand t
+  where t.country != 'WW'
+),
+top5 as (
+  select
+    r.name,
+    r.rn,
+    cm.display_name as country_display_name
+  from ranked r
+  left join talent.country_metadata cm on r.country = cm.iso
+  where r.rn <= 3
+)
+select
+  th.name,
+  th.home_country_display as home_country,
+  th.home_country_demand_multiplier,
+  th.worldwide_demand,
+  string_agg(t.country_display_name, ', ' order by t.rn) as top_countries
+from talent_home th
+left join top5 t on th.name = t.name
+group by th.name, th.home_country_display, th.home_country_demand_multiplier, th.worldwide_demand
+order by th.worldwide_demand desc
+```
 
-- **Global view** — Top markets’ share of global demand, and a heatmap of each talent’s share within those markets. Demand is expressed as a multiplier; travelability shows how well demand in a market compares to the talent’s home market.
-- **Regional view** — Switch between **average demand** (impact: mean multiplier by region) and **share of global demand** (reach: each region’s % of total). Drill into a region to see talent performance and demand by sub-region.
-- **By country** — Pick a market to see a talent leaderboard (demand and market standing) for that country.
-- **By talent** — Pick an individual to see their demand and travelability by market, top markets, and regional breakdown.
+<DataTable data={talent_board} title="Talent Analysis Cohort" rows=all sort="worldwide_demand desc">
+  <Column id=name title="Talent"/>
+  <Column id=worldwide_demand contentType=bar title="Worldwide Demand" fmt='#,##0.0'/>
+  <Column id=home_country title="Home Country"/>
+  <Column id=home_country_demand_multiplier contentType=bar title="Home Country Demand" fmt='#,##0.0'/>
+  <Column id=top_countries title="Top 3 Markets"/>
+</DataTable>
 
-All metrics use the same talent selection and exclude the global “WW” aggregate. Start with the charts below, then use the filters and dropdowns to explore regions, countries, and individuals.
+This dashboard uses Parrot demand data to compare the NNAF talent cohort across markets. **Demand** is shown as a multiplier (relative to average); **travelability** measures how well a talent’s demand in a given market or set of markets compares to their home market. All views use the same fixed talent set and exclude the worldwide (WW) aggregate.
+
+***Note:* Demand Data is taken between 1 January 2025 to 28 January 2025.**
+
+**Views:**
+- **Global** — Home demand vs. travelability scatter; top 20 markets by share of demand; heatmap of each talent’s share within those markets.
+- **Regional** — Average demand or share of global demand by region; select a region to see a talent leaderboard and sub-region heatmap.
+- **By country** — Select a market for a leaderboard (demand multiplier and market standing) in that country.
+- **By talent** — Select an individual for demand by market, travelability, top markets, and regional breakdown.
+
 
 ```sql demand_vs_travelability
 with max_values as (
