@@ -57,7 +57,7 @@ order by th.worldwide_demand desc
 
 This dashboard uses Parrot demand data to compare the NNAF talent cohort across markets. **Demand** is shown as a multiplier (relative to average); **travelability** measures how well a talent’s demand in a given market or set of markets compares to their home market. All views use the same fixed talent set and exclude the worldwide (WW) aggregate.
 
-***Note:* Demand Data is taken between 1 January 2025 to 28 January 2025.**
+***Note:* Demand Data is taken between 1 January 2025 to 28 January 2026.**
 
 **Views:**
 - **Global** — Home demand vs. travelability scatter; top 20 markets by share of demand; heatmap of each talent’s share within those markets.
