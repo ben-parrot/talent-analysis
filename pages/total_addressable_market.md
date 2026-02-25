@@ -159,7 +159,7 @@ limit 15
 
 <ButtonGroup name=tam_som_chart_toggle_2>
   <ButtonGroupItem valueLabel="Total Addressable Market" value="tom" default />
-  <ButtonGroupItem valueLabel="Servicable Obtainable Market" valye="som" />
+  <ButtonGroupItem valueLabel="Serviceable Obtainable Market" valye="som" />
 </ButtonGroup>
 
 {#if inputs.tam_som_chart_toggle_2 === 'tom'}
