@@ -15,9 +15,9 @@ Summary of the Total Addressable Market (TAM) and Serviceable Obtainable Market 
 ```sql tam_global_trend
 select
   t.quarter_end,
-  sum(t.TAM) as global_total_addressable_market,
-  sum(t.SOM) as global_serviceable_obtainable_market,
-  sum(t.total_subscriptions) as global_subs,
+  sum(t.TAM::double)::double as global_total_addressable_market,
+  sum(t.SOM::double)::double as global_serviceable_obtainable_market,
+  sum(t.total_subscriptions::double)::double as global_subs,
   count(distinct t.market) as market_count
 from TAM_nnaf_quarterly_totals t
 group by t.quarter_end
@@ -29,7 +29,7 @@ order by t.quarter_end
   x=quarter_end
   y={["global_total_addressable_market", "global_serviceable_obtainable_market"]}
   title="Global TAM vs SOM Over Time"
-  yFmt='#,##0'
+  yFmt='#,##0.0,,"M"'
   labels=true
 />
 
@@ -37,8 +37,8 @@ order by t.quarter_end
 select
   t.quarter_end,
   t.region,
-  sum(t.TAM) as total_tam,
-  sum(t.SOM) as total_som
+  sum(t.TAM::double)::double as total_tam,
+  sum(t.SOM::double)::double as total_som
 from TAM_nnaf_quarterly_totals t
 group by t.quarter_end, t.region
 order by t.quarter_end
@@ -52,22 +52,20 @@ order by t.quarter_end
 <AreaChart
   data={tam_quarterly_trend}
   x=quarter_end
-  y=total_tam
+  y=total_tam yFmt='#,##0.0,,"M"'
   series=region
   title="TAM by NNAF Region Over Time"
   subtitle="Stacked by NNAF region (APAC, EMEA, LATAM, UCAN)"
-  yFmt='#,##0'
   type=stacked
 />
 {:else}
 <AreaChart
   data={tam_quarterly_trend}
   x=quarter_end
-  y=total_som
+  y=total_som yFmt='#,##0.0,,"M"'
   series=region
   title="SOM by NNAF Region Over Time"
   subtitle="Stacked by NNAF region (APAC, EMEA, LATAM, UCAN)"
-  yFmt='#,##0'
   type=stacked
 />
 {/if}
@@ -84,9 +82,9 @@ from TAM_nnaf_quarterly_totals
 where quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
 ```
 
-<BigValue data={tam_snapshot} value=global_tam title="Global TAM" fmt='#,##0' />
-<BigValue data={tam_snapshot} value=global_som title="Global SOM" fmt='#,##0' />
-<BigValue data={tam_snapshot} value=global_subs title="Total Subscriptions" fmt='#,##0' />
+<BigValue data={tam_snapshot} value=global_tam title="Global TAM" fmt='#,##0.00,,"M"' />
+<BigValue data={tam_snapshot} value=global_som title="Global SOM" fmt='#,##0.00,,"M"' />
+<BigValue data={tam_snapshot} value=global_subs title="Total Subscriptions" fmt='#,##0.00,,"M"' />
 <BigValue data={tam_snapshot} value=market_count title="Markets" />
 
 ### TAM by Region
@@ -111,7 +109,7 @@ order by total_tam desc
   y={["total_tam", "total_som"]}
   title="TAM vs SOM by Region"
   subtitle="Grouped by country metadata region classification"
-  yFmt='#,##0'
+  yFmt='#,##0.0,,"M"'
   sort=true
   labels=true
   labelPosition=outside
@@ -139,7 +137,7 @@ limit 15
   x=country_name
   y=TAM
   title="Largest Markets by TAM"
-  yFmt='#,##0'
+  yFmt='#,##0.00,,"M"'
   sort=false
   swapXY=true
   labels=true
@@ -167,14 +165,14 @@ order by total_tam desc
 <DataTable data={tam_region_summary} title="TAM & SOM by NNAF Region" rows=all>
   <Column id=nnaf_region title="NNAF Region"/>
   <Column id=markets title="Markets"/>
-  <Column id=total_subscriptions title="Total Subscriptions" fmt='#,##0'/>
-  <Column id=subscriber_penetration title="Subscriber Penetration" fmt='#,##0'/>
-  <Column id=total_tam title="TAM" contentType=bar fmt='#,##0'/>
-  <Column id=total_som title="SOM" contentType=bar fmt='#,##0'/>
+  <Column id=total_subscriptions title="Total Subscriptions" fmt='#,##0.0,,"M"'/>
+  <Column id=subscriber_penetration title="Subscriber Penetration" fmt='#,##0.0,,"M"'/>
+  <Column id=total_tam title="TAM" contentType=bar fmt='#,##0.0,,"M"'/>
+  <Column id=total_som title="SOM" contentType=bar fmt='#,##0.0,,"M"'/>
   <Column id=som_capture_rate title="SOM/TAM" fmt='pct0'/>
 </DataTable>
 
-## All Market Data
+<!-- ## All Market Data
 
 ```sql tam_all_markets
 select
@@ -206,4 +204,4 @@ order by t.quarter_end desc, t.TAM desc
   <Column id=som_capture_rate title="SOM/TAM" fmt='pct0'/>
   <Column id=geo_region title="Region"/>
   <Column id=sub_region title="Sub-Region"/>
-</DataTable>
+</DataTable> -->
