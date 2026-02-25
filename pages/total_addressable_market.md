@@ -54,7 +54,7 @@ order by t.quarter_end
   x=quarter_end
   y=total_tam yFmt='#,##0.0,,"M"'
   series=region
-  title="TAM by NNAF Region Over Time"
+  title="TAM by Region Over Time"
   subtitle="Stacked by NNAF region (APAC, EMEA, LATAM, UCAN)"
   type=stacked
 />
@@ -64,8 +64,8 @@ order by t.quarter_end
   x=quarter_end
   y=total_som yFmt='#,##0.0,,"M"'
   series=region
-  title="SOM by NNAF Region Over Time"
-  subtitle="Stacked by NNAF region (APAC, EMEA, LATAM, UCAN)"
+  title="SOM by Region Over Time"
+  subtitle="Stacked by region (APAC, EMEA, LATAM, UCAN)"
   type=stacked
 />
 {/if}
@@ -106,7 +106,7 @@ group by t.region
 order by total_tam desc
 ```
 
-<DataTable data={tam_region_summary} title="TAM & SOM by NNAF Region" rows=all>
+<DataTable data={tam_region_summary} title="TAM & SOM by Region" rows=all>
   <Column id=nnaf_region title="Region"/>
   <Column id=markets title="Markets"/>
   <Column id=total_subscriptions title="Total Subscriptions" fmt='#,##0.0,,"M"'/>
@@ -119,23 +119,21 @@ order by total_tam desc
 ```sql tam_regional
 select
   cm.region as geo_region,
-  sum(t.TAM) as total_tam,
-  sum(t.SOM) as total_som,
+  sum(t.TAM) as total_addressable_market,
+  sum(t.SOM) as serviceable_obtainable_market,
   count(distinct t.market) as markets
 from TAM_nnaf_quarterly_totals t
 left join country_metadata cm on t.market = cm.iso
 where t.quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
   and t.TAM > 0
 group by cm.region
-order by total_tam desc
+order by total_addressable_market desc
 ```
 
 <BarChart
   data={tam_regional}
   x=geo_region
-  y={["total_tam", "total_som"]}
-  title="TAM vs SOM by Region"
-  subtitle="Grouped by country metadata region classification"
+  y={["total_addressable_market", "serviceable_obtainable_market"]}
   yFmt='#,##0.0,,"M"'
   sort=true
   labels=true
