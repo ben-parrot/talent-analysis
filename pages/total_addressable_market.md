@@ -87,7 +87,34 @@ where quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
 <BigValue data={tam_snapshot} value=global_subs title="Total Subscriptions" fmt='#,##0.00,,"M"' />
 <BigValue data={tam_snapshot} value=market_count title="Markets" />
 
-### TAM by Region
+<!-- ### TAM by Region -->
+
+<!-- ### Regional Summary -->
+
+```sql tam_region_summary
+select
+  t.region as nnaf_region,
+  count(distinct t.market) as markets,
+  sum(t.total_subscriptions) as total_subscriptions,
+  sum(t.subscriber_penetration) as subscriber_penetration,
+  sum(t.TAM) as total_tam,
+  sum(t.SOM) as total_som,
+  case when sum(t.TAM) > 0 then sum(t.SOM) / sum(t.TAM) else null end as som_capture_rate
+from TAM_nnaf_quarterly_totals t
+where t.quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
+group by t.region
+order by total_tam desc
+```
+
+<DataTable data={tam_region_summary} title="TAM & SOM by NNAF Region" rows=all>
+  <Column id=nnaf_region title="Region"/>
+  <Column id=markets title="Markets"/>
+  <Column id=total_subscriptions title="Total Subscriptions" fmt='#,##0.0,,"M"'/>
+  <Column id=subscriber_penetration title="Subscriber Penetration" fmt='#,##0.0,,"M"'/>
+  <Column id=total_tam title="TAM" contentType=bar fmt='#,##0.0,,"M"'/>
+  <Column id=total_som title="SOM" contentType=bar fmt='#,##0.0,,"M"'/>
+  <Column id=som_capture_rate title="SOM/TAM" fmt='pct0'/>
+</DataTable>
 
 ```sql tam_regional
 select
@@ -116,7 +143,7 @@ order by total_tam desc
   type=grouped
 />
 
-### Top 15 Markets by TAM
+### Top 15 Markets
 
 ```sql tam_top_markets
 select
@@ -132,11 +159,17 @@ order by t.TAM desc
 limit 15
 ```
 
+<ButtonGroup name=tam_som_chart_toggle_2>
+  <ButtonGroupItem valueLabel="Total Addressable Market" value="tom" default />
+  <ButtonGroupItem valueLabel="Servicable Obtainable Market" valye="som" />
+</ButtonGroup>
+
+{#if inputs.tam_som_chart_toggle_2 === 'tom'}
 <BarChart
   data={tam_top_markets}
   x=country_name
   y=TAM
-  title="Largest Markets by TAM"
+  title="Top 15 Markets by TAM"
   yFmt='#,##0.00,,"M"'
   sort=false
   swapXY=true
@@ -144,33 +177,20 @@ limit 15
   labelPosition=outside
   fillColor="#14ADA4"
 />
-
-### Regional Summary
-
-```sql tam_region_summary
-select
-  t.region as nnaf_region,
-  count(distinct t.market) as markets,
-  sum(t.total_subscriptions) as total_subscriptions,
-  sum(t.subscriber_penetration) as subscriber_penetration,
-  sum(t.TAM) as total_tam,
-  sum(t.SOM) as total_som,
-  case when sum(t.TAM) > 0 then sum(t.SOM) / sum(t.TAM) else null end as som_capture_rate
-from TAM_nnaf_quarterly_totals t
-where t.quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
-group by t.region
-order by total_tam desc
-```
-
-<DataTable data={tam_region_summary} title="TAM & SOM by NNAF Region" rows=all>
-  <Column id=nnaf_region title="NNAF Region"/>
-  <Column id=markets title="Markets"/>
-  <Column id=total_subscriptions title="Total Subscriptions" fmt='#,##0.0,,"M"'/>
-  <Column id=subscriber_penetration title="Subscriber Penetration" fmt='#,##0.0,,"M"'/>
-  <Column id=total_tam title="TAM" contentType=bar fmt='#,##0.0,,"M"'/>
-  <Column id=total_som title="SOM" contentType=bar fmt='#,##0.0,,"M"'/>
-  <Column id=som_capture_rate title="SOM/TAM" fmt='pct0'/>
-</DataTable>
+{:else}
+<BarChart
+  data={tam_top_markets}
+  x=country_name
+  y=SOM
+  title="Top 15 Markets by SOM"
+  yFmt='#,##0.00,,"M"'
+  sort=false
+  swapXY=true
+  labels=true
+  labelPosition=outside
+  fillColor="#14ADA4"
+/>
+{/if}
 
 <!-- ## All Market Data
 
