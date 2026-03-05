@@ -8,7 +8,36 @@ Summary of the Total Addressable Market (TAM) and Serviceable Obtainable Market 
 
 **Definitions**
 * *TAM*: Total addressable market
-* *SOM*: Serviceable obtainable market
+* *SOM*: Serviceable obtainable market; total addressable market, limited to Sci-Fi, Thriller, and Drama
+
+```sql tam_region_summary
+select
+  t.region as nnaf_region,
+  count(distinct t.market) as markets,
+  sum(t.total_subscriptions) as total_subscriptions,
+  (sum(t.subscriber_penetration)/sum(t.total_subscriptions)) as nnaf_demand_share,
+  sum(t.subscriber_penetration) as subscriber_penetration,
+  (sum(t.TAM)/sum(t.subscriber_penetration)) as viewers_per_subscription,
+  sum(t.TAM) as total_tam,
+  sum(t.SOM) as total_som,
+  case when sum(t.TAM) > 0 then sum(t.SOM) / sum(t.TAM) else null end as som_capture_rate
+from TAM_nnaf_quarterly_totals t
+where t.quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
+group by t.region
+order by total_tam desc
+```
+
+<DataTable data={tam_region_summary} title="TAM & SOM by Region" rows=all>
+  <Column id=nnaf_region title="Region"/>
+  <Column id=markets title="Markets"/>
+  <Column id=total_subscriptions title="Total Subscriptions" fmt='#,##0.0,,"M"'/>
+  <Column id=nnaf_demand_share title="NNAF Demand Share" fmt='0.0%'/>
+  <Column id=subscriber_penetration title="Subscriber Penetration" fmt='#,##0.0,,"M"'/>
+  <Column id=viewers_per_subscription title="Viewers per Subscription" fmt='#,##0.0'/>
+  <Column id=total_tam title="TAM" contentType=bar fmt='#,##0.0,,"M"'/>
+  <Column id=total_som title="SOM" contentType=bar fmt='#,##0.0,,"M"'/>
+  <Column id=som_capture_rate title="SOM/TAM" fmt='pct0'/>
+</DataTable>
 
 ## TAM & SOM Over Time
 
@@ -17,7 +46,7 @@ select
   t.quarter_end,
   sum(t.TAM::double)::double as global_total_addressable_market,
   sum(t.SOM::double)::double as global_serviceable_obtainable_market,
-  sum(t.total_subscriptions::double)::double as global_subs,
+  sum(t.total_subscriptions::double)::double as global_subscribers,
   count(distinct t.market) as market_count
 from TAM_nnaf_quarterly_totals t
 group by t.quarter_end
@@ -27,9 +56,44 @@ order by t.quarter_end
 <LineChart
   data={tam_global_trend}
   x=quarter_end
-  y={["global_total_addressable_market", "global_serviceable_obtainable_market"]}
+  y={["global_total_addressable_market", "global_serviceable_obtainable_market",
+  "global_subscribers"]}
   title="Global TAM vs SOM Over Time"
   yFmt='#,##0.0,,"M"'
+  labels=true
+/>
+
+```sql tam_global_growth
+with base as (
+  select
+    quarter_end,
+    sum(TAM::double)::double as global_total_addressable_market,
+    sum(SOM::double)::double as global_serviceable_obtainable_market,
+    sum(total_subscriptions::double)::double as global_subscribers
+  from TAM_nnaf_quarterly_totals
+  group by quarter_end
+),
+growth as (
+  select
+    quarter_end,
+    (global_total_addressable_market - lag(global_total_addressable_market) over (order by quarter_end))
+      / nullif(lag(global_total_addressable_market) over (order by quarter_end), 0) as total_addressable_market,
+    (global_serviceable_obtainable_market - lag(global_serviceable_obtainable_market) over (order by quarter_end))
+      / nullif(lag(global_serviceable_obtainable_market) over (order by quarter_end), 0) as serviceable_obtainable_market,
+    (global_subscribers - lag(global_subscribers) over (order by quarter_end))
+      / nullif(lag(global_subscribers) over (order by quarter_end), 0) as subscribers
+  from base
+)
+select * from growth where total_addressable_market is not null
+order by quarter_end
+```
+
+<LineChart
+  data={tam_global_growth}
+  x=quarter_end
+  y={["total_addressable_market", "serviceable_obtainable_market", "subscribers"]}
+  title="Global TAM, SOM & Subscribers — QoQ Growth Rate"
+  yFmt='pct1'
   labels=true
 />
 
@@ -76,7 +140,7 @@ order by t.quarter_end
 select
   sum(TAM) as global_tam,
   sum(SOM) as global_som,
-  sum(total_subscriptions) as global_subs,
+  sum(total_subscriptions) as global_subscribers,
   count(distinct market) as market_count
 from TAM_nnaf_quarterly_totals
 where quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
@@ -84,37 +148,12 @@ where quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
 
 <BigValue data={tam_snapshot} value=global_tam title="Global TAM" fmt='#,##0.00,,"M"' />
 <BigValue data={tam_snapshot} value=global_som title="Global SOM" fmt='#,##0.00,,"M"' />
-<BigValue data={tam_snapshot} value=global_subs title="Total Subscriptions" fmt='#,##0.00,,"M"' />
+<BigValue data={tam_snapshot} value=global_subscribers title="Total Subscriptions" fmt='#,##0.00,,"M"' />
 <BigValue data={tam_snapshot} value=market_count title="Markets" />
 
 <!-- ### TAM by Region -->
 
 <!-- ### Regional Summary -->
-
-```sql tam_region_summary
-select
-  t.region as nnaf_region,
-  count(distinct t.market) as markets,
-  sum(t.total_subscriptions) as total_subscriptions,
-  sum(t.subscriber_penetration) as subscriber_penetration,
-  sum(t.TAM) as total_tam,
-  sum(t.SOM) as total_som,
-  case when sum(t.TAM) > 0 then sum(t.SOM) / sum(t.TAM) else null end as som_capture_rate
-from TAM_nnaf_quarterly_totals t
-where t.quarter_end = (select max(quarter_end) from TAM_nnaf_quarterly_totals)
-group by t.region
-order by total_tam desc
-```
-
-<DataTable data={tam_region_summary} title="TAM & SOM by Region" rows=all>
-  <Column id=nnaf_region title="Region"/>
-  <Column id=markets title="Markets"/>
-  <Column id=total_subscriptions title="Total Subscriptions" fmt='#,##0.0,,"M"'/>
-  <Column id=subscriber_penetration title="Subscriber Penetration" fmt='#,##0.0,,"M"'/>
-  <Column id=total_tam title="TAM" contentType=bar fmt='#,##0.0,,"M"'/>
-  <Column id=total_som title="SOM" contentType=bar fmt='#,##0.0,,"M"'/>
-  <Column id=som_capture_rate title="SOM/TAM" fmt='pct0'/>
-</DataTable>
 
 ```sql tam_regional
 select
@@ -139,6 +178,7 @@ order by total_addressable_market desc
   labels=true
   labelPosition=outside
   type=grouped
+  title="TAM & SOM by Region - Latest Quarter"
 />
 
 ### Top 15 Markets
